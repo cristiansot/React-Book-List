@@ -3,7 +3,7 @@
 ## Spanish
 
 ### Objetivo:
-    En esta tarea, creará una aplicación de Lista de libros usando React. Desarrollará una aplicación web donde los usuarios podrán agregar libros a su lista de libros y eliminar libros de su lista de libros. La aplicación se centrará en los componentes de React, la gestión del estado y el manejo básico de eventos. Este proyecto está diseñado para mejorar su comprensión de los conceptos fundamentales de React mediante la creación de una aplicación web simple pero funcional. Agregará de forma iterativa funciones para administrar y mostrar una lista de libros.
+En esta tarea, creará una aplicación de Lista de libros usando React. Desarrollará una aplicación web donde los usuarios podrán agregar libros a su lista de libros y eliminar libros de su lista de libros. La aplicación se centrará en los componentes de React, la gestión del estado y el manejo básico de eventos. Este proyecto está diseñado para mejorar su comprensión de los conceptos fundamentales de React mediante la creación de una aplicación web simple pero funcional. Agregará de forma iterativa funciones para administrar y mostrar una lista de libros.
 
 Para cada paso a continuación, envíe su código a su repositorio Git antes de pasar al siguiente paso. Esto le ayudará a practicar buenos hábitos de codificación (¡comprometerse con frecuencia!) y también permitirá a sus instructores ver su historial de confirmaciones a medida que avanza por los pasos.
 
@@ -45,16 +45,16 @@ Un enlace a su repositorio de GitHub que contiene el código del proyecto. Aseg�
  
 
 ### Desafíos adicionales para la práctica:
-    Agregue una función para editar el título de un libro en la lista.
-    Introduzca un estilo simple para mejorar la UI/UX de su aplicación.
-    Haga posible que el usuario cargue una imagen de la portada del libro junto con el título y muestre los libros como portadas con los títulos enumerados debajo. (Pista: ¡un nuevo componente, Libro, podría ayudar!)
-    Haga posible que el usuario incluya una URL donde pueda comprar el libro y haga un hipervínculo del título del libro a la página de compra.
-    ¡Cualquier característica adicional que se te ocurra! ¡Cuantas más funciones agregues, más cómodo te sentirás con React!
+Agregue una función para editar el título de un libro en la lista.
+Introduzca un estilo simple para mejorar la UI/UX de su aplicación.
+Haga posible que el usuario cargue una imagen de la portada del libro junto con el título y muestre los libros como portadas con los títulos enumerados debajo. (Pista: ¡un nuevo componente, Libro, podría ayudar!)
+Haga posible que el usuario incluya una URL donde pueda comprar el libro y haga un hipervínculo del título del libro a la página de compra.
+¡Cualquier característica adicional que se te ocurra! ¡Cuantas más funciones agregues, más cómodo te sentirás con React!
 
 # English
 
 ### Objective:
-    In this assignment, you will create a Book List application using React. You will develop a web application where users can add books to their book list and remove books from their book list. The application will focus on React components, state management, and basic event handling. This project is designed to enhance your understanding of fundamental React concepts by building a simple yet functional web application. You will iteratively add features to manage and display a list of books.
+In this assignment, you will create a Book List application using React. You will develop a web application where users can add books to their book list and remove books from their book list. The application will focus on React components, state management, and basic event handling. This project is designed to enhance your understanding of fundamental React concepts by building a simple yet functional web application. You will iteratively add features to manage and display a list of books.
 
 For each step below, commit your code to your Git repository before moving to the next step. This will help you practice good coding habits (commit often!) and also allow your instructors to see your commit history as you move through the steps.
 
@@ -94,9 +94,9 @@ For each step below, commit your code to your Git repository before moving to th
     A screenshot of your application with a list of your favorite books! 
  
 
-### sAdditional challenges for practice:
-    Add a feature to edit the title of a book in the list.
-    Introduce simple styling to improve the UI/UX of your application.
-    Make it possible for the user to upload an image of the book cover along with the title, and display the books as their covers with titles listed underneath. (Hint: a new component, Book, might help!) 
-    Make it possible for the user to include a URL to where to purchase the book, and hyperlink the title of the book to the purchase page.
-    Any additional features you can think of! The more features you add, the more comfortable you'll get with React!
+### Additional challenges for practice:
+Add a feature to edit the title of a book in the list.
+Introduce simple styling to improve the UI/UX of your application.
+Make it possible for the user to upload an image of the book cover along with the title, and display the books as their covers with titles listed underneath. (Hint: a new component, Book, might help!) 
+Make it possible for the user to include a URL to where to purchase the book, and hyperlink the title of the book to the purchase page.
+Any additional features you can think of! The more features you add, the more comfortable you'll get with React!
