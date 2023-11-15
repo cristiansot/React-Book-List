@@ -1,6 +1,7 @@
 import React from 'react';
+import '../css/booklist.css'
 
-function BookList() {
+export function BookList() {
     return (
       <div className='content'>
           <img className='imgBook' src={require('../images/book-holy-ghost.jpg')}
@@ -15,5 +16,3 @@ function BookList() {
       </div>
     )
 }
-
-export default BookList;
