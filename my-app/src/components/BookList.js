@@ -1,18 +1,30 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../css/booklist.css'
 
-export function BookList() {
+function BookList(props) {
+
+  const [] = useState();
     return (
       <div className='content'>
-          <img className='imgBook' src={require('../images/book-holy-ghost.jpg')}
-          alt='Book image'/>
+          <img className='imgBook' src={require(`../images/book-${props.image}.jpg`)}
+          alt='Book image' />
           <div className='contenText'>
-            <h2 className='title'>Holy Ghost</h2>
-            <h3 className='author'>Edited by Fiona Snailham</h3>
-            <p className='description'>“I confess I have a particular dislike to remain in a church after dusk; 
-            it recalls to my mind the most painful story I ever heard.”</p>
-
+            <h2 className='title'>{props.title}</h2>
+            <h3 className='author'>{props.author}</h3>
+            <p className='description'>{props.description}</p>
           </div>
       </div>
     )
 }
+
+export default BookList;
+
+{/* <div className='content'>
+  <img className='imgBook' src={require(`../images/book-${props.image}.jpg`)}
+  alt='Book image' />
+  <div className='contenText'>
+    <h2 className='title'>{props.title}</h2>
+    <h3 className='author'>{props.author}</h3>
+    <p className='description'>{props.description}</p>
+  </div>
+</div> */}

@@ -1,0 +1,16 @@
+.contentForm {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: center;
+}
+
+.submit {
+    text-transform: capitalize;
+}
+
+input {
+    background-color: white !important;
+    border-radius: 15px !important;
+    border: none;
+}
