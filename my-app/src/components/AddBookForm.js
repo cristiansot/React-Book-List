@@ -1,23 +1,29 @@
 import React, {useState} from 'react';
-import '../css/AddBookForm.css'
+import { v4 as uuidv4 } from "uuid";
+import '../css/AddBookForm.css';
+
 
 function AddBookForm(props) {
 
     const [input, setInput] = useState('');
 
     const change = e => {
-        console.log('Testing...')
+        setInput(e.target.value);
+        console.log(e.target.value);
     }
 
     const sendForm = e => {
-        const newBook = {
-            id: '1',
-            title: 'Title here'
+        e.preventDefault();
+        // console.log('Sending form')
+        const newBook  = {
+            id: uuidv4(),
+            title: input,
         }
+        props.onSubmit(newBook);
     }
 
     return (
-        <form className="contentForm">
+        <form className="contentForm" onSubmit={sendForm}>
             <input 
                 className="titleForm"
                 type="text"

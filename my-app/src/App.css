@@ -11,8 +11,11 @@ html, body {
 
 header {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     width: 100%;
+    margin-bottom: 50px;
 }
 
 .mainContent {
@@ -34,11 +37,11 @@ header {
     font-family: 'Cinzel', serif;
     font-weight: 800;
     display: flex;
-    max-width: 900px;
+    max-width: 1200px;
     font-size: 2.5em;
     font-weight: 300;
     line-height: 1.1;
-    margin: 40px 0;
+    margin: 40px;
 }
 
 
