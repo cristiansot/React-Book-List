@@ -1,14 +1,13 @@
 .contentForm {
-    width: 900px;
     display: flex;
-    flex-direction: row;
-    align-items: baseline;
+    flex-flow: row wrap;
     justify-content: space-around;
 }
 
 .submit {
     width: 140px;
     height: 24px;
+    margin: 10px;
     border-radius: 10px;
     border: none;
     background-color: blanchedalmond;
@@ -23,8 +22,14 @@
 input {
     width: 200px;
     height: 24px;
-    background-color: white !important;
-    border-radius: 12px !important;
+    margin: 10px;
+    background-color: white;
+    border-radius: 12px;
     border: none;
     text-align: center;
+}
+
+.inputText input {
+    /* display: none; */
+    
 }

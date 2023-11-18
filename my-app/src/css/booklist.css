@@ -10,6 +10,7 @@
     display: flex;
     flex-flow: row wrap;
     margin-top: -10px;
+    justify-content: center;
 }
 
 .contentBook {
@@ -51,7 +52,43 @@
     height: auto;
     font-family: 'Cinzel', serif;
     font-weight: 400;
-    line-height: 1rem;
+    line-height: 0.9rem;
     padding: 5px;
     color: #d5d6d1;
+}
+
+p {
+    font-size: 13px;
+}
+
+.deleteBtn {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: -8px;
+    margin-bottom: 10px;
+    border-radius: 100%;
+    border: hidden;
+    margin-left: 272px;
+    background-color:rgb(196, 250, 139);
+    cursor:pointer;
+}
+
+.deleteIcon {
+    font-size: 1.2rem;
+    color: #4815a1;
+}
+
+.deleteBtn:hover {
+    background-color:#4815a1;
+    border: solid 1px rgb(120, 120, 120);
+    
+    & .deleteIcon {
+        color: rgb(233, 233, 233);
+    }
 }

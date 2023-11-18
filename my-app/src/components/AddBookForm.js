@@ -1,55 +1,59 @@
-import React, {useState} from 'react';
-import { v4 as uuidv4 } from "uuid";
+import { useForm } from 'react-hook-form';
+import { v4 as uuidv4 } from 'uuid';
 import '../css/AddBookForm.css';
 
+function AddBookForm({ addBooks }) {
+  const { register, handleSubmit, setValue, reset } = useForm('');
 
-function AddBookForm(props) {
+  const onSubmit = handleSubmit((data) => {
+    const newBook = {
+      id: uuidv4(),
+      title: data.title,
+      author: data.author,
+      description: data.description,
+      image: data.image, 
+    };
+    addBooks(newBook);
+    reset(); // Reset all form fields
+  });
 
-    const [input, setInput] = useState('');
+  return (
+    <form className="contentForm" onSubmit={onSubmit}>
+      <input
+        type="text"
+        placeholder="Write a title"
+        name="title"
+        {...register('title')}
+      />
+      <input
+        type="text"
+        placeholder="Write an Author"
+        name="author"
+        {...register('author')}
+      />
+      <input
+        type="text"
+        placeholder="Write a description"
+        name="description"
+        {...register('description')}
+      />
+      <div className="inputText">
+        <input
+          className="image"
+          type="file"
+          {...register('image')}
+          onChange={(e) => {
+            // I need to resolve this point --> how to upload images at the server
+            setValue('image', e.target.value);
+          }}
+        />
+      </div>
 
-    const change = e => {
-        setInput(e.target.value);
-        console.log(e.target.value);
-    }
-
-    const sendForm = e => {
-        e.preventDefault();
-        // console.log('Sending form')
-        const newBook  = {
-            id: uuidv4(),
-            title: input,
-        }
-        props.onSubmit(newBook);
-    }
-
-    return (
-        <form className="contentForm" onSubmit={sendForm}>
-            <input 
-                className="titleForm"
-                type="text"
-                placeholder="Write a title"
-                name="title"
-                onChange={change}
-            />
-
-            <input 
-                className="authorForm"
-                type="text"
-                placeholder="Write a Author"
-                name="author"
-            />
-
-            <input 
-                className="descriptionForm"
-                type="text"
-                placeholder="Write a description"
-                name="description"
-            />
-            <button className="submit">
-                Add Book
-            </button>
-        </form>
-    )
+      <button className="submit" type="submit">
+        Add Book
+      </button>
+    </form>
+  );
 }
 
 export default AddBookForm;
