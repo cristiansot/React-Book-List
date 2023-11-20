@@ -11,7 +11,7 @@ const BookList = ({ books, onDeleteBook }) => {
             <button className='deleteBtn' onClick={() => onDeleteBook(item.id)}>
               <RiDeleteBin2Fill className='deleteIcon' />
             </button>
-            <img className='imgBook' src={item.image} alt='Book image' />
+            <img className='imgBook' src={item.image} alt='' />
           </div>
           <h2 className='title'>{item.title}</h2>
           <h3 className='author'>{item.author}</h3>

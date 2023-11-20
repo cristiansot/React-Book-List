@@ -13,27 +13,30 @@ function App() {
     getBooks();
   }, []);
 
+  //Function that to get books from the server
   function getBooks() {
     Axios.get(url).then((response) => {
       setBooks(response.data);
     });
   }
 
+  //Function that to put books from the server and reorganize the list
   function addBooks(newBook) {
     Axios.post(url, newBook).then((response) => {
       setBooks([...books, response.data]);
     });
   }
 
-  function newBooks(newBook) {
-    setBooks([...books, newBook]);
-  }
-
+  //Function that delete a post when make a click ondelete button
   function deleteBook(bookId) {
     Axios.delete(`${url}/${bookId}`).then(() => {
       // Filter out the deleted book from the state
       setBooks(books.filter((book) => book.id !== bookId));
+    })
+    .catch((error) => {
+      console.log(error);
     });
+   
   }
 
   return (

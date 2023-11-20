@@ -1,58 +1,5 @@
 # React-Book-List ---> My App
 
-## Spanish
-
-### Objetivo:
-En esta tarea, creará una aplicación de Lista de libros usando React. Desarrollará una aplicación web donde los usuarios podrán agregar libros a su lista de libros y eliminar libros de su lista de libros. La aplicación se centrará en los componentes de React, la gestión del estado y el manejo básico de eventos. Este proyecto está diseñado para mejorar su comprensión de los conceptos fundamentales de React mediante la creación de una aplicación web simple pero funcional. Agregará de forma iterativa funciones para administrar y mostrar una lista de libros.
-
-Para cada paso a continuación, envíe su código a su repositorio Git antes de pasar al siguiente paso. Esto le ayudará a practicar buenos hábitos de codificación (¡comprometerse con frecuencia!) y también permitirá a sus instructores ver su historial de confirmaciones a medida que avanza por los pasos.
-
-### Paso 1: configuración inicial
-    Utilice create-react-app para configurar el entorno de su proyecto. Elimina todo el contenido innecesario.
-    En la aplicación, cree un componente de función básica. Comience con un encabezado simple y un párrafo que describa su página.
-    Ejecute el servidor React para asegurarse de que la configuración se haya realizado correctamente.
-
-### Paso 2: crear un componente secundario
-    A la aplicación, agregue un componente secundario que mostrará la lista de libros.
-    Cree un componente BookList que muestre una lista de 3 libros predefinidos.
-
-### Paso 3: Introducción de accesorios
-    Modifique el componente BookList para que no muestre libros predefinidos, sino que muestre los libros que recibe como accesorios.
-    En la aplicación, asegúrese de pasar la lista de libros a BookList.
-
-### Paso 4: Gestión del Estado
-    Ahora, debe hacer que la lista de libros sea dinámica en lugar de una lista estática de libros predefinidos. Introduzca un estado en el componente de su aplicación para realizar un seguimiento de la lista de libros.
-    ¡Necesita una forma para que los usuarios agreguen nuevos libros! Agregue un nuevo componente secundario en la aplicación que permitirá la entrada del usuario, llamado AddBookForm.
-    Implemente el componente AddBookForm usando un formulario React.
-
-### Paso 5: Manejo de eventos y renderizado dinámico
-    Cuando el usuario envía un nuevo título de libro, es necesario actualizar la lista de libros en la aplicación. Agregue manejo de eventos para administrar las entradas de los usuarios.
-    Utilice el estado en el componente Aplicación para representar dinámicamente la lista de libros en BookList.
-
-### Paso 6: ampliar la funcionalidad
-    Por último, también queremos que los usuarios eliminen libros de su lista de libros. Amplíe la funcionalidad de su aplicación para que:
-    Aparece una X en la que se puede hacer clic junto al nombre de cada libro.
-    Al hacer clic, la lista de libros se actualiza para que el libro seleccionado se elimine de la lista.
-
-### Paso 7: Agregar persistencia de datos
-    Cree una API REST simulada para su página web usando mockapi.io
-    Incluya solicitudes OBTENER, PUBLICAR y ELIMINAR cuando se agreguen, vean y eliminen libros.
- 
-
-### Entregar:
-Un enlace a su repositorio de GitHub que contiene el código del proyecto. Asegúrese de que su repositorio sea público para que se pueda acceder a él y evaluarlo.
-¡Una captura de pantalla de tu aplicación con una lista de tus libros favoritos!
- 
-
-### Desafíos adicionales para la práctica:
-Agregue una función para editar el título de un libro en la lista.
-Introduzca un estilo simple para mejorar la UI/UX de su aplicación.
-Haga posible que el usuario cargue una imagen de la portada del libro junto con el título y muestre los libros como portadas con los títulos enumerados debajo. (Pista: ¡un nuevo componente, Libro, podría ayudar!)
-Haga posible que el usuario incluya una URL donde pueda comprar el libro y haga un hipervínculo del título del libro a la página de compra.
-¡Cualquier característica adicional que se te ocurra! ¡Cuantas más funciones agregues, más cómodo te sentirás con React!
-
-# English
-
 ### Objective:
 In this assignment, you will create a Book List application using React. You will develop a web application where users can add books to their book list and remove books from their book list. The application will focus on React components, state management, and basic event handling. This project is designed to enhance your understanding of fundamental React concepts by building a simple yet functional web application. You will iteratively add features to manage and display a list of books.
 
