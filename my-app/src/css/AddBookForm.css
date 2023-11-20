@@ -94,3 +94,13 @@ textarea {
     font-family: 'Cinzel', serif;
     font-size: 0.85rem;
 }
+
+.required {
+    display: flex;
+    flex-direction: column;
+}
+
+span {
+    font-size: 14px;
+    margin-top: -5px;
+}
