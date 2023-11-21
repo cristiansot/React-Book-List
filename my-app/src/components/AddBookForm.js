@@ -6,18 +6,23 @@ import '../css/AddBookForm.css';
 /* The AddBookForm function is a React component that renders a form for adding a new book. */
 function AddBookForm({ addBooks }) {
   
-  const { register, handleSubmit, setValue, reset, formState: {errors}} = useForm('');
-  const onSubmit = handleSubmit((data) => {
+  /* useForm hook from the react-hook-form library to initialize form-related functions
+  and state variables. */
+  const { register, handleSubmit, setValue, reset, formState: {errors} } = useForm('');
 
+/* The onSubmit function is a callback function that is called when the form is submitted. It is
+responsible for handling the form data and adding a new book. */
+  const onSubmit = handleSubmit((data) => {
+    
     const newBook = {
       id: uuidv4(),
       title: data.title,
       author: data.author,
       description: data.description,
-      // src={URL.createObjectURL data.image}
       image: data.image,
     };
-    console.log(data);
+    // console.log(data);
+  
 
     addBooks(newBook);
     reset(); // Reset all form fields
@@ -70,19 +75,22 @@ function AddBookForm({ addBooks }) {
         <input
           className="image"
           type="file"
-
-          // {...register('image', {required: true})}
-      
+          name="image"
+          
           onChange={(e) => {
-            // I need to resolve this point --> how to upload images at the server
 
-            setValue('image', e.target.files[0].name);
-            console.log(e.target.files[0].name);
-            
-            { 
-              errors.title && <span>Image required</span>
-            }
-            
+            const image = e.target.files[0];
+
+            setValue('image', image); 
+
+            const reader = new FileReader();
+            reader.addEventListener("load", () => {
+              console.log(reader.result);
+             
+            });
+
+            reader.readAsDataURL(image); 
+           
           }}
         />
       </button>

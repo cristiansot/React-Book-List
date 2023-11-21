@@ -82,7 +82,7 @@ input {
 .uploadButton input[type='file'] {
     position: absolute;
     cursor: pointer;
-    transform: scale(3);
+    transform: scale(2);
     opacity: 0;
 }
 
@@ -103,4 +103,5 @@ textarea {
 span {
     font-size: 14px;
     margin-top: -5px;
+    color: #444;
 }
