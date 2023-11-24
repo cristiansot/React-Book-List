@@ -16,7 +16,6 @@ function App() {
     getBooks();
   }, []);
 
-
   /* The function getBooks makes an HTTP GET request to a specified URL using Axios, and then sets the
   esponse data to a variable called `books` */
   function getBooks() {
@@ -28,8 +27,7 @@ function App() {
     });
   }
 
-  
-  /* The function `addBooks` sends a POST request to a specified URL with a new book object, and then
+  /* The function `addBooks` sends a POST request to a specified URL with a news book object, and then
   updates the list of books with the response data.
   newBook - The `newBook` parameter is an object that represents a new book to be added to a collection of books.*/
   function addBooks(newBook) {
@@ -39,6 +37,7 @@ function App() {
     })
     .catch((error) => {
       console.log(error);
+      alert(`Status code: ${error.response.statusText} - The image must be less than 50kb`)
     });
   }
 

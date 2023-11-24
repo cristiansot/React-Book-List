@@ -21,15 +21,13 @@ function AddBookForm({ addBooks }) {
       description: data.description,
       image: data.image,
     };
-    // console.log(image);
   
     addBooks(newBook);
     reset(); // Reset all form fields
   });
 
   /* The function `readFileAsDataURL` reads a file and returns a promise that resolves with the file's
-  data URL. The "file" parameter is the file object that you want to read as a data URL. It can
-  be obtained from an input element of type "file" or from a drag and drop event. */
+  data URL. The "file" parameter is the file object that you want to read as a data URL.*/
   function readFileAsDataURL(file) {
     return new Promise((resolve, reject) => {
       const reader = new FileReader();
@@ -43,7 +41,7 @@ function AddBookForm({ addBooks }) {
       };
   
       reader.readAsDataURL(file); // Read the file as a data URL
-    });
+    });    
   }
 
   return ( 
@@ -96,10 +94,7 @@ function AddBookForm({ addBooks }) {
 
           /* The `onChange` event handler is triggered when the user selects a file for uploading. */
           onChange={(e) => {
-            const image = e.target.files[0];
-            // console.log(image);
-            // console.log(e.target.files[0]);
-            
+            const image = e.target.files[0];     
             const reader = new FileReader();
             reader.addEventListener("load", (e) => {
               console.log(reader.result);
@@ -110,13 +105,10 @@ function AddBookForm({ addBooks }) {
           reader.readAsDataURL(image);
           readFileAsDataURL(image)
             .then((dataURL) => {
-              // console.log('Data URL:', dataURL);
               setValue('image', dataURL);
-              // Perform further actions with the data URL here
             })
             .catch((error) => {
               console.error('Error reading file:', error);
-              // console.log(image);
             });
           }}
         />
@@ -130,6 +122,5 @@ function AddBookForm({ addBooks }) {
 }
 
 export default AddBookForm;
-
 
 
