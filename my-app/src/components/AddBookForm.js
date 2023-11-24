@@ -10,8 +10,8 @@ function AddBookForm({ addBooks }) {
   and state variables. */
   const { register, handleSubmit, setValue, reset, formState: {errors} } = useForm('');
 
-/* The onSubmit function is a callback function that is called when the form is submitted. It is
-responsible for handling the form data and adding a new book. */
+  /* The onSubmit function is a callback function that is called when the form is submitted. It is
+  responsible for handling the form data and adding a new book. */
   const onSubmit = handleSubmit((data) => {
     
     const newBook = {
@@ -21,12 +21,30 @@ responsible for handling the form data and adding a new book. */
       description: data.description,
       image: data.image,
     };
-    // console.log(data);
+    // console.log(image);
   
-
     addBooks(newBook);
     reset(); // Reset all form fields
   });
+
+  /* The function `readFileAsDataURL` reads a file and returns a promise that resolves with the file's
+  data URL. The "file" parameter is the file object that you want to read as a data URL. It can
+  be obtained from an input element of type "file" or from a drag and drop event. */
+  function readFileAsDataURL(file) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+  
+      reader.onload = (event) => {
+        resolve(event.target.result); // Resolve with the data URL
+      };
+  
+      reader.onerror = (event) => {
+        reject(event.target.error); // Reject with any error that occurred
+      };
+  
+      reader.readAsDataURL(file); // Read the file as a data URL
+    });
+  }
 
   return ( 
   /* Structure of the form */
@@ -73,24 +91,33 @@ responsible for handling the form data and adding a new book. */
         <i className='uploadIcon'><LuUpload /></i>
         <p>Upload File</p>
         <input
-          className="image"
           type="file"
           name="image"
-          
+
+          /* The `onChange` event handler is triggered when the user selects a file for uploading. */
           onChange={(e) => {
-
             const image = e.target.files[0];
-
-            setValue('image', image); 
-
+            // console.log(image);
+            // console.log(e.target.files[0]);
+            
             const reader = new FileReader();
-            reader.addEventListener("load", () => {
+            reader.addEventListener("load", (e) => {
               console.log(reader.result);
-             
             });
 
-            reader.readAsDataURL(image); 
-           
+          /* This code block is responsible for reading the selected image file and converting it into
+          a data URL. */
+          reader.readAsDataURL(image);
+          readFileAsDataURL(image)
+            .then((dataURL) => {
+              // console.log('Data URL:', dataURL);
+              setValue('image', dataURL);
+              // Perform further actions with the data URL here
+            })
+            .catch((error) => {
+              console.error('Error reading file:', error);
+              // console.log(image);
+            });
           }}
         />
       </button>
@@ -103,3 +130,6 @@ responsible for handling the form data and adding a new book. */
 }
 
 export default AddBookForm;
+
+
+
