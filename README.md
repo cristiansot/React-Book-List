@@ -1,4 +1,4 @@
-# React-Book-List ---> My App
+# React-Book-List ---> http://www.gssd.cl/reactbooklist/
 
 ### Objective:
 In this assignment, you will create a Book List application using React. You will develop a web application where users can add books to their book list and remove books from their book list. The application will focus on React components, state management, and basic event handling. This project is designed to enhance your understanding of fundamental React concepts by building a simple yet functional web application. You will iteratively add features to manage and display a list of books.
